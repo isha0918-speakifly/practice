@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speakifly – Speak English with confidence</title>
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><img src="logo.png" alt="Speakifly" class="logo"><span id="who"></span></header>
+<main>
+  <section id="welcome" class="hidden">
+    <div class="hero">
+      <div class="emoji">🎤 💬 🌟</div>
+      <h2>Speak English with confidence</h2>
+      <p>Listen. Speak. Learn new words. Let's begin!</p>
+      <label>Your name</label>
+      <input id="nameInput" type="text" placeholder="e.g. Isha" maxlength="30" autocomplete="given-name">
+      <label>I want word meanings in</label>
+      <div class="langs">
+        <button class="lang sel" data-l="hi"><b>हिन्दी</b><small>+ English</small></button>
+        <button class="lang" data-l="gu"><b>ગુજરાતી</b><small>+ English</small></button>
+      </div>
+      <button id="startBtn" class="primary big">Get started →</button>
+    </div>
+  </section>
+
+  <section id="practice" class="hidden">
+    <div class="card stats">
+      <div><span class="pill" id="dayInfo"></span></div>
+      <div class="grow"><div class="bar"><div id="barFill"></div></div><small id="countInfo"></small></div>
+    </div>
+    <div class="card">
+      <div class="label">📖 Read this sentence</div>
+      <div id="sentence" class="sentence"></div>
+      <div class="row">
+        <button id="listenBtn">🔊 Listen</button>
+        <button id="slowBtn">🐢 Slowly</button>
+      </div>
+      <div id="words"></div>
+    </div>
+    <div class="card center">
+      <div class="label">🎤 Now you speak</div>
+      <button id="recBtn" class="rec">🎤 Start recording</button>
+      <p id="status" class="muted"></p>
+      <div id="result" class="hidden">
+        <h3>Check your speaking</h3>
+        <div class="row c">
+          <button id="mineBtn">▶ Hear yourself</button>
+          <button id="modelBtn">🔊 Hear model</button>
+        </div>
+        <div id="match"></div>
+        <button id="nextBtn" class="primary big">Next sentence →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="hidden card">
+    <div class="label">🧠 Vocabulary check</div>
+    <p id="qCount" class="muted"></p>
+    <h2 id="qWord"></h2>
+    <div id="qOpts"></div>
+    <button id="qNext" class="primary big hidden">Next →</button>
+  </section>
+
+  <section id="done" class="hidden hero">
+    <div class="emoji">🎉</div>
+    <h2 id="doneTitle"></h2>
+    <p id="doneText"></p>
+  </section>
+</main>
+<script src="sentences.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
