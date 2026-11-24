@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Speaking Practice</title>
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><img src="logo.svg" alt="Logo" class="logo"><h1>Speaking Practice</h1></header>
+<main>
+  <section id="welcome" class="card hidden">
+    <h2>Welcome!</h2>
+    <p>Practise 20 sentences every day for 30 days.</p>
+    <input id="nameInput" type="text" placeholder="Enter your name" maxlength="40" autocomplete="name">
+    <button id="startBtn" class="primary">Start</button>
+  </section>
+
+  <section id="practice" class="card hidden">
+    <div class="top"><span id="hello"></span><span id="dayInfo"></span></div>
+    <div class="bar"><div id="barFill"></div></div>
+    <p id="countInfo" class="muted"></p>
+
+    <div id="sentence" class="sentence"></div>
+    <div class="row">
+      <button id="listenBtn">🔊 Listen to sentence</button>
+      <button id="slowBtn">🐢 Listen slowly</button>
+    </div>
+
+    <div id="words"></div>
+
+    <div class="row">
+      <button id="recBtn" class="rec">🎤 Start recording</button>
+    </div>
+    <p id="status" class="muted"></p>
+
+    <div id="result" class="hidden">
+      <h3>Check your speaking</h3>
+      <div class="row">
+        <button id="mineBtn">▶ Listen to yourself</button>
+        <button id="modelBtn">🔊 Listen to model again</button>
+      </div>
+      <div id="match"></div>
+      <p class="muted">Compare your recording with the model. Speak again if you are not happy.</p>
+      <button id="nextBtn" class="primary">Next sentence →</button>
+    </div>
+  </section>
+
+  <section id="done" class="card hidden">
+    <h2 id="doneTitle"></h2>
+    <p id="doneText"></p>
+  </section>
+</main>
+<script src="sentences.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
